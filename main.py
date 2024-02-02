@@ -10,22 +10,20 @@ def index():
         "landing.html.jinja"
      )
 
-@app.route('/register')
-@auth.login_required
-def index():
+@app.route('/register', methods=['Get','Post'])
+def register():
     if request.method=='POST':
-        new_email=request.form["new_user"]
-        new_username=request.form["new_user"]
-        new_possword=request.form["new_user"]
+        new_email=request.form["Email"]
+        new_username=request.form["Username"]
+        new_password=request.form["Password"]
+        new_description=request.form["Description"]
         cursor=connect.cursor()
-        cursor.execute(f"INSERT INTO `User`(`Username`, `Password`, `Email`) VALUES('{new_user}')")
+        cursor.execute(f"INSERT INTO `User`(`Username`, `Password`, `Email`, `Description`) VALUES ('{new_username}', '{new_email}', '{new_password}', '{new_description}')")
         cursor.close()
         connect.commit()
-def register():
     return render_template(
         "Signup.html.jinja"
      )
-
 connect=pymysql.connect(
     database="djames_Swipes",
     user="djames",

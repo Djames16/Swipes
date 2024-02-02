@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Sign Up!</title>
 
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <style>
-    h1 {
-      color: rgb(138, 0, 236);
-    }
-    input{
-      float: center;
-    }
-    div {
-      text-align: center;
-    }
-  </style>
+<head>
+    <title>Sign Up!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: rgb(138, 0, 236);
+        }
+
+        img {
+            max-width: 25%;
+            height: auto;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            background-color: rgb(138, 0, 236);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            text-align: center;
+        }
+    </style>
 </head>
-<body class ="container mx-auto" style="background-color: black">
-  <h1 class ="text-center">Swipes</h1>
-  <h1 class ="text-center">We Swipe Here!</h1>
-  <div>
-  <img src="/static/Logo.png" height="500">
-  
-<form method="POST">
-<input name="Email" placeholder="Type your email">
-<input name="Username" placeholder="Type your username">
-<input name="Password" placeholder="Type your Password">
-<input type="submit">
-</form>
-  </div>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Swipes</h1>
+        <h1 class="text-center">We Swipe Here!</h1>
+        <div class="text-center">
+            <img src="/static/Logo.png" height="200" class="mb-4 animate__animated animate__bounce">
+
+        </div>
+
+        <form method="POST">
+            <div class="form-group">
+                <input class="form-control" name="Email" placeholder="Type your email" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="Username" placeholder="Type your username">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="Password" name="Password" placeholder="Type your Password">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="Description" placeholder="Write about yourself">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
 </body>
+
+</html>
