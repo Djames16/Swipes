@@ -29,7 +29,9 @@ def load_user(user_id):
     return User(result["id"], result["Username"])
 
 @app.route('/')
-def index():
+def landing_page():
+    if flask_login.current_user.is_authenticated:
+        return redirect('/feed')
     return render_template(
         "landing.html.jinja"
      )
@@ -69,8 +71,9 @@ def login():
      )
 @app.route('/feed', methods=['GET','POST'])
 @flask_login.login_required
-def post_feed():
-    return'feed page'
+def feed():
+    return'flask_login.current_user'
+
 
 connect=pymysql.connect(
     database="djames_Swipes",
