@@ -1,38 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Welcome to the feed page</title>
+  <title>Swipes</title>
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
     h1 {
-      color: rgb(138, 0, 236);
-    }
-    .input{
-      float: right;
-    }
-    .input{
-      float:left
+      color: rgb(0, 20, 236);
     }
     div {
       text-align: center;
     }
+    body {
+        background-color: white;
+        color: white;
+        }
+
+        h1 {
+            color:  rgb(0, 20, 236);
+        }
+
+        img {
+            max-width: 25%;
+            height: auto;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            background-color: rgb(138, 0, 236);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            text-align: center;
+        }
+        body{
+    margin-top:20px;
+    background:#FAFAFA;
+}
+
+.profile-card{
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+  background-size: cover;
+  width: 100%;
+  min-height: 90px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.profile-card img.profile-photo{
+  border: 7px solid #fff;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: -30px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.profile-card h5 a{
+  font-size: 15px;
+}
+
+.profile-card a{
+  font-size: 12px;
+}
+
+ul.nav-news-feed{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 0 40px 0;
+    background:#fff;
+  padding-top:20px;
+}
+
+ul.nav-news-feed li{
+  list-style: none;
+  display: block;
+  padding: 15px 0;
+}
+
+ul.nav-news-feed li div{
+  position: relative;
+  margin-left: 30px;
+  }
+
+ul.nav-news-feed li div::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #f1f2f2;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+ul.nav-news-feed li a{color: #6d6e71;}
+
+ul.nav-news-feed li i{
+  font-size: 18px;
+  margin-right: 15px;
+  float: left;
+}
+
+ul.nav-news-feed i.icon1{color: #8dc63f;}
+
+ul.nav-news-feed i.icon2{color: #662d91;}
+
+ul.nav-news-feed i.icon3{color: #ee2a7b;}
+
+ul.nav-news-fee i.icon4{color: #f7941e;}
+
+ul.nav-news-fee i.con5{color: #1c75bc;}
+
+ul.nav-news-feed i.icon6{color: #9e1f63;}
+
+#chat-block{
+  margin: 0 0 40px 0;
+  text-align: center;
+  background:#fff;
+  padding-top:20px;
+}
+
+#chat-block .title{
+  background: #8dc63f;
+  padding: 2px 20px;
+  width: 70%;
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+ul.online-users{
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+ul.online-users li{
+  list-style: none;
+  position: relative;
+  margin: 3px auto !important;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+ul.online-users li span.online-dot{
+  background: linear-gradient(to bottom, rgba(141,198,63, 1), rgba(0,148,68, 1));
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -6px;
+  border: 2px solid #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+img.profile-photo {
+    height: 70px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+ul.online-users {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.text-white {
+    color: #fff;
+}
   </style>
 </head>
-<body class ="container mx-auto" style="background-color: black">
-  <h1 class ="text-center">Swipes</h1>
-  <h1 class ="text-center">We Swipe Here!</h1>
+<body class ="container mx-auto" style="background-color: white">
+  <h1 class ="text-center">Welcome to the feed page!</h1>
   <div>
   <img src="/static/Logo.png" height="500">
  <div class="position-relative m-4">
   <div class="progress" style="height: 1px;">
     <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <a href="/register"><button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 5rem; height:5rem;">Sign Up!</button></a>
-  <a href="/login"><button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 5rem; height:5rem;">Login!</button></a>
- <h1 class ="text-center">Welcome to Swipes where you can interact with anything! What seperates us is that we provide an easy to use where you can speak your mind without restriction and interact with others.</h1>
+
+ <h1 class ="text-center"></h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 static">
+            <div class="profile-card">
+                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user" class="profile-photo">
+            	<h5><a href="#" class="text-white">Daeon James</a></h5>
+            	<a href="#" class="text-white"><i class="fa fa-user"></i> 0 followers</a>
+            </div>
+            <ul class="nav-news-feed">
+              <li><i class="fa fa-list-alt icon1"></i><div><a href="#">My Newsfeed</a></div></li>
+              <li><i class="fa fa-user icon3"></i><div><a href="#">Friends</a></div></li>
+              <li><i class="fa fa-picture-o icon5"></i><div><a href="#">Images</a></div></li>
+              <li><i class="fa fa-video-camera icon6"></i><div><a href="#">Videos</a></div></li>
+            </ul>
+            <div id="chat-block">
+              <ul class="online-users list-inline">
+                <li><a href="#" title="Linda Lohan"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="Sophia Lee"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="John Doe"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="Alexis Clark"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="James Carter"><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="Robert Cook"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="Anna Young"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+                <li><a href="#" title="Julia Cox"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="img-responsive profile-photo"><span class="online-dot"></span></a></li>
+              </ul>
+            </div>
+        </div>
+	</div>
 </div>
 </body>
